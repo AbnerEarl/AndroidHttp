@@ -142,7 +142,7 @@
         });
  
  
-项目用到的权限
+# 项目用到的权限
 
   在manifest文件中添加访问的权限：
  
@@ -153,7 +153,8 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
    
- 项目用到的三方依赖
+# 项目用到的三方依赖
+
     在app的build.gradle下添加如下依赖：
     
     android {
