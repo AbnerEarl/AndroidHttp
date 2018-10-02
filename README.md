@@ -9,15 +9,10 @@
 1.第一步，在项目的build.gradle下配置，注意是项目的build.gradle：
 
      allprojects {
-
         repositories {
-        
             ...
-            
             maven { url "https://jitpack.io" }
-            
         }
-        
      }
     
     
@@ -50,11 +45,14 @@
  
  
 # 使用示例：
+
+由于每个框架集成和封装的方法有很对，这里只是随意挑选一个做演示，具体方法和目录见本文后面。
+
  1.Okhttp
  
   输入这一行代码：
   
-            OkhttpByPost.postFile("http://www.baidu.com","/mnt/TestFolder/test.doc",new Callback()); 
+            OkhttpByPost.postFile("http://www.baidu.com","/mnt/TestFolder/test.doc", new Callback()); 
  
 然后按 Alt+Enter 键，选择 implement methods，自动生成如下代码：
 
@@ -80,7 +78,7 @@
  
 项目用到的权限
 
-  3.在manifest文件中添加访问的权限：
+  在manifest文件中添加访问的权限：
  
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
@@ -88,3 +86,29 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+   
+ 项目用到的三方依赖
+    在app的build.gradle下添加如下依赖：
+    
+    android {
+      packagingOptions {
+           exclude 'META-INF/LICENSE'
+           exclude 'META-INF/NOTICE'
+           exclude 'META-INF/rxjava.properties'
+         }
+      ...
+      ...
+     }
+    
+     dependencies {
+            ...
+            implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+            testImplementation 'com.squareup.okhttp3:mockwebserver:3.11.0'
+            implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+            implementation 'com.mcxiaoke.volley:library:1.0.19'
+            implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+            implementation 'io.reactivex.rxjava2:rxjava:2.1.0'
+            implementation 'com.tamic.novate:novate:1.5.2.3'
+            ...
+     }
+    
