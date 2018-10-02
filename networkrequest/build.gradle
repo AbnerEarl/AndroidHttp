@@ -1,0 +1,71 @@
+apply plugin: 'com.android.library'
+//apply plugin: 'com.novoda.bintray-release' // 添加bintray插件
+
+android {
+    compileSdkVersion 27
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/rxjava.properties'
+    }
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //OKHTTP网络请求框架
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    testImplementation 'com.squareup.okhttp3:mockwebserver:3.11.0'
+    //Glide图片加载框架
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    //retrofit网络请求框架
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    //Gson数据封装与解析
+    implementation 'com.google.code.gson:gson:2.8.5'
+    //数据转换
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    //日志拦截器
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.5.0'
+    //volley网络请求框架
+    implementation 'com.mcxiaoke.volley:library:1.0.19'
+    //Rxjava网络请求框架
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.0'
+    implementation 'com.tamic.novate:novate:1.5.2.3'
+}
+
+
+//publish {
+//     userOrg = 'YouAreOnlyOne' // Binary用户名
+//     repoName = 'AndroidHttp' // Binary上的刚才新建的仓库名（Repository）
+//     groupId = 'com.frank.ycj520' // 依赖名compile 'x:y:z'中的包名x
+//     artifactId = 'networkrequest' // 依赖名compile 'x:y:z'中的项目名y
+//     publishVersion = '1.0.1' // 依赖名compile 'x:y:z'中的版本号z
+//     desc = '对该开源组件的说明' // 对该开源组件的说明
+//     website = 'https://github.com/YouAreOnlyOne/AndroidHttp.git' // VCS地址，即填写项目上传的Github地址
+//}
