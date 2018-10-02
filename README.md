@@ -2,6 +2,10 @@
 
 一个整合OkHttp 、Retrofit 、Volley 、RxJava、Novate多种开源网络框架的项目，对网络请求框架和方法进行了高度的封装和集成，让网络请求更加简洁、简单，只需要一行代码就完成。
 
+本项目主要根据 GET 、POST 、UPLOAD 、DOWNLOAD 四个方面进行整合，集成了数据请求、数据解析、文件上传、文件下载、图片展示等方法。重载多样化参数的构造方法，大约有近 100 个左右的常用方法。
+
+每个方法都封装了需要参数，根据方法名结合自身需要传输的参数即可了解需要使用的方法，只需要一行代码进行调用和实现，重写逻辑处理代码即可。
+
 # 使用方法
 
 方法一：
@@ -46,11 +50,11 @@
  
 # 使用示例：
 
-由于每个框架集成和封装的方法有很对，这里只是随意挑选一个做演示，具体方法和目录见本文后面。
+由于每个框架集成和封装的方法有很对，这里只是随意挑选一个做演示，具体方法和目录见本文后面。使用总体策略：框架名称 . 方法名（如：OkhttpByPost.postFile() ）。
 
  1.Okhttp
  
-   (1)输入这一行代码：
+ (1)输入这一行代码：
   
             OkhttpByPost.postFile("http://www.baidu.com","/mnt/TestFolder/test.doc", new Callback()); 
  
@@ -71,7 +75,7 @@
             }
         });
  
-    (2)输入这一行代码：
+ (2)输入这一行代码：
   
             OkhttpByPost.postFileAddHeader("http://www.baidu.com", headerName, headerValue, tokenName, tokenValue, "/mnt/TestFolder/test.doc", new Callback()); 
  
