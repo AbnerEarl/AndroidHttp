@@ -8,7 +8,7 @@
 
 1.第一步，在项目的build.gradle下配置，注意是项目的build.gradle：
 
-   allprojects {
+     allprojects {
 
         repositories {
         
@@ -18,7 +18,7 @@
             
         }
         
-    }
+     }
     
     
 2.第二步,在app的build.gradle下添加如下依赖：
@@ -27,7 +27,7 @@
             ...
             compile 'com.github.Brioal:Test:1.0'
             ...
-   }
+     }
     
     
 方法二：
@@ -37,9 +37,9 @@
  2.第二步,在app的build.gradle下添加如下依赖，注意，两个依赖是平级关系：
     
     repositories {
-     flatDir {
-          dirs 'libs'
-        }
+       flatDir {
+           dirs 'libs'
+         }
     }
     
     dependencies {
