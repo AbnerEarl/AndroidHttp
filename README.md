@@ -50,7 +50,7 @@
 
  1.Okhttp
  
-  (1)输入这一行代码：
+   (1)输入这一行代码：
   
             OkhttpByPost.postFile("http://www.baidu.com","/mnt/TestFolder/test.doc", new Callback()); 
  
@@ -71,7 +71,7 @@
             }
         });
  
-  (2)输入这一行代码：
+    (2)输入这一行代码：
   
             OkhttpByPost.postFileAddHeader("http://www.baidu.com", headerName, headerValue, tokenName, tokenValue, "/mnt/TestFolder/test.doc", new Callback()); 
  
@@ -118,6 +118,7 @@
             RxJavaByPost.PostString(this, "http://www.baidu.com/", "fanyi/china", parameters, new RxStringCallback());
  
    然后按 Alt+Enter 键，选择 implement methods，自动生成如下代码：
+   
             RxJavaByPost.PostString(this, "http://www.baidu.com/", "fanyi/china", parameters, new RxStringCallback() {
             @Override
             public void onNext(Object tag, String response) {
