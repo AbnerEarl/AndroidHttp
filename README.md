@@ -8,7 +8,7 @@
 
 1.第一步，在项目的build.gradle下配置，注意是项目的build.gradle：
 
-allprojects {
+   allprojects {
 
         repositories {
         
@@ -23,41 +23,29 @@ allprojects {
     
 2.第二步,在app的build.gradle下添加如下依赖：
 
-dependencies {
-
+    dependencies {
             ...
-            
             compile 'com.github.Brioal:Test:1.0'
-            
             ...
-            
-    }
+   }
     
     
-    方法二：
+方法二：
     
-    1.第一步，下载依赖的包：https://github.com/YouAreOnlyOne/AndroidHttp/edit/master/README.md 。并放到项目的 libs 目录下面。
+ 1.第一步，下载依赖的包：https://github.com/YouAreOnlyOne/AndroidHttp/edit/master/README.md 。并放到项目的 libs 目录下面。
     
-    2.第二步,在app的build.gradle下添加如下依赖，注意，两个依赖是平级关系：
+ 2.第二步,在app的build.gradle下添加如下依赖，注意，两个依赖是平级关系：
     
     repositories {
-    
      flatDir {
-     
           dirs 'libs'
-          
         }
-        
     }
     
     dependencies {
-    
             ...
-            
             compile(name:'mylibrary-debug', ext:'aar')
-            
             ...
-            
     }
  
  
@@ -66,36 +54,23 @@ dependencies {
  
   输入这一行代码：
   
- OkhttpByPost.postFile("http://www.baidu.com","/mnt/TestFolder/test.doc",new Callback()); 
+            OkhttpByPost.postFile("http://www.baidu.com","/mnt/TestFolder/test.doc",new Callback()); 
  
 然后按 Alt+Enter 键，选择 implement methods，自动生成如下代码：
 
- OkhttpByPost.postFile("http://www.baidu.com","/mnt/TestFolder/test.doc", new Callback() {
- 
+           OkhttpByPost.postFile("http://www.baidu.com","/mnt/TestFolder/test.doc", new Callback() {
             @Override
-            
             public void onFailure(Call call, IOException e) {
-            
                  ...
-                 
                  //请求失败的逻辑处理
-                 
                  ...
-                 
             }
-
             @Override
-            
             public void onResponse(Call call, Response response) throws IOException {
-            
                   ...
-                  
                   //请求成功的逻辑处理
-                  
                   ...
-                  
             }
-            
         });
  
  
