@@ -155,7 +155,7 @@
    
 # 项目用到的三方依赖
 
-    在app的build.gradle下添加如下依赖：
+ 在app的build.gradle下添加如下依赖：
     
     android {
       packagingOptions {
@@ -178,4 +178,20 @@
             implementation 'com.tamic.novate:novate:1.5.2.3'
             ...
      }
-    
+ 
+ # 详细使用指南
+ 
+ 更新中……
+ 
+# 其它
+
+1.项目还有很多不完善的地方，欢迎大家指导。
+
+2.项目持续更新开源，有兴趣加入项目或者跟随项目的伙伴，可以邮件联系！ 
+
+3.关注或者喜欢或者尝试使用或者感兴趣的伙伴可以，点击 star 。
+
+# 作者邮箱
+
+ycj52011@outlook.com
+
