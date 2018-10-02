@@ -50,7 +50,7 @@
 
  1.Okhttp
  
-  输入这一行代码：
+  (1)输入这一行代码：
   
             OkhttpByPost.postFile("http://www.baidu.com","/mnt/TestFolder/test.doc", new Callback()); 
  
@@ -71,9 +71,75 @@
             }
         });
  
+  (2)输入这一行代码：
+  
+            OkhttpByPost.postFileAddHeader("http://www.baidu.com", headerName, headerValue, tokenName, tokenValue, "/mnt/TestFolder/test.doc", new Callback()); 
+ 
+然后按 Alt+Enter 键，选择 implement methods，自动生成如下代码：
+
+           OkhttpByPost.postFileAddHeader("http://www.baidu.com", headerName, headerValue, tokenName, tokenValue, "/mnt/TestFolder/test.doc", new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+                 ...
+                 //请求失败的逻辑处理
+                 ...
+            }
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                  ...
+                  //请求成功的逻辑处理
+                  ...
+            }
+        });
+ 
  
  
  2.Volley
+ 
+   输入这一行代码：
+  
+            VolleyByImage.loadImageByImageRequest(this,"http://baidu.com", imageView,new Response.ErrorListener());
+ 
+   然后按 Alt+Enter 键，选择 implement methods，自动生成如下代码：
+            
+            VolleyByImage.loadImageByImageRequest(this, "http://baidu.com", imageView, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                         ...
+                         //图片加载错误的逻辑处理
+                         ...
+                    }
+                });
+ 
+ 3.RxJava
+ 
+  输入这一行代码：
+  
+            RxJavaByPost.PostString(this, "http://www.baidu.com/", "fanyi/china", parameters, new RxStringCallback());
+ 
+   然后按 Alt+Enter 键，选择 implement methods，自动生成如下代码：
+            RxJavaByPost.PostString(this, "http://www.baidu.com/", "fanyi/china", parameters, new RxStringCallback() {
+            @Override
+            public void onNext(Object tag, String response) {
+               ...
+               //网络请求成功返回的结果逻辑处理
+               ...
+            }
+
+            @Override
+            public void onError(Object tag, Throwable e) {
+               ...
+               //网络请求错误返回的结果逻辑处理
+              ...
+            }
+
+            @Override
+            public void onCancel(Object tag, Throwable e) {
+                ...
+                //网络请求取消返回的结果逻辑处理
+                ...
+            }
+        });
  
  
 项目用到的权限
