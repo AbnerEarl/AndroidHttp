@@ -37,7 +37,7 @@
     
 方法二：
     
- 1.第一步，下载依赖的包：https://github.com/YouAreOnlyOne/AndroidHttp/edit/master/README.md 。并放到项目的 libs 目录下面。
+ 1.第一步，下载依赖的包：https://github.com/YouAreOnlyOne/AndroidHttp/blob/master/aar/networkrequest-release.aar 。并放到项目的 libs 目录下面。
     
  2.第二步,在app的build.gradle下添加如下依赖，注意，两个依赖是平级关系：
     
