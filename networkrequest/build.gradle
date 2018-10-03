@@ -2,41 +2,48 @@ apply plugin: 'com.android.library'
 //apply plugin: 'com.novoda.bintray-release' // 添加bintray插件
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'key0'
+            keyPassword 'wdsjnsjydjy'
+            storeFile file('I:/AppKeys/jinding.jks')
+            storePassword 'wdsjnsjydjy'
+        }
+    }
     compileSdkVersion 27
-
     packagingOptions {
         exclude 'META-INF/LICENSE'
         exclude 'META-INF/NOTICE'
         exclude 'META-INF/rxjava.properties'
     }
-
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 27
         versionCode 1
-        versionName "1.0"
-
+        versionName "1.0.0.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        signingConfig signingConfigs.config
     }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
         }
     }
-
+    productFlavors {
+    }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:27.1.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-
     //OKHTTP网络请求框架
     implementation 'com.squareup.okhttp3:okhttp:3.11.0'
     testImplementation 'com.squareup.okhttp3:mockwebserver:3.11.0'
