@@ -8,7 +8,9 @@
 
 # 最新版本
 
-版本号：[![](https://www.jitpack.io/v/YouAreOnlyOne/AndroidHttp.svg)](https://www.jitpack.io/#YouAreOnlyOne/AndroidHttp)  。 使用自行替换下面的版本号，以获得最新版本。
+版本号：[![](https://www.jitpack.io/v/YouAreOnlyOne/AndroidHttp.svg)](https://www.jitpack.io/#YouAreOnlyOne/AndroidHttp)
+
+使用自行替换下面的版本号，以获得最新版本。
 
 # 使用方法
 
@@ -28,7 +30,7 @@
 
     dependencies {
             ...
-            implementation 'com.github.YouAreOnlyOne:AndroidHttp:v1.0'
+            implementation 'com.github.YouAreOnlyOne:AndroidHttp:版本号'
             ...
      }
     
