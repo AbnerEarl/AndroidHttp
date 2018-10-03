@@ -6,6 +6,8 @@
 
 每个方法都封装了需要参数，根据方法名结合自身需要传输的参数即可了解需要使用的方法，只需要一行代码进行调用和实现，重写逻辑处理代码即可。
 
+[![](https://www.jitpack.io/v/YouAreOnlyOne/AndroidHttp.svg)](https://www.jitpack.io/#YouAreOnlyOne/AndroidHttp)
+
 # 使用方法
 
 方法一：
