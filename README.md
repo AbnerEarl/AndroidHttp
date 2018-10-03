@@ -14,6 +14,8 @@
 
 # 使用方法
 
+Android中使用：
+
 方法一：
 
 1.第一步，在项目的build.gradle下配置，注意是项目的build.gradle：
@@ -49,11 +51,50 @@
     
     dependencies {
             ...
-            compile(name:'mylibrary-debug', ext:'aar')
+            compile(name:'networkrequest-release', ext:'aar')
             ...
     }
  
+Maven中使用：
+
+第一步，在maven中添加：
+
+	<repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://www.jitpack.io</url>
+		</repository>
+	</repositories>
+	
+ 第二步，添加依赖：
  
+ 	<dependency>
+	    <groupId>com.github.YouAreOnlyOne</groupId>
+	    <artifactId>AndroidHttp</artifactId>
+	    <version>版本号</version>
+	</dependency>
+	
+Sbt中使用：
+
+  第一步： 在build.sbt文件末尾添加：
+  
+  	resolvers += "jitpack" at "https://www.jitpack.io"
+	
+  第二步：添加依赖：
+  
+  	libraryDependencies += "com.github.YouAreOnlyOne" % "AndroidHttp" % "版本号"
+ 
+ Leiningen中使用：
+ 
+   第一步：在project.clj文件末尾添加：
+   
+   	:repositories [["jitpack" "https://www.jitpack.io"]]
+  
+  第二步：添加依赖：
+  
+  	:dependencies [[com.github.YouAreOnlyOne/AndroidHttp "版本号"]]
+	
+	
 # 使用示例：
 
 由于每个框架集成和封装的方法有很对，这里只是随意挑选一个做演示，具体方法和目录见本文后面。使用总体策略：框架名称 . 方法名（如：OkhttpByPost . postFile() ）。
