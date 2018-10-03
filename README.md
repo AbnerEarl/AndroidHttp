@@ -8,7 +8,7 @@
 
 # 最新版本
 
-版本号：[![](https://www.jitpack.io/v/YouAreOnlyOne/AndroidHttp.svg)](https://www.jitpack.io/#YouAreOnlyOne/AndroidHttp)  使用自行替换下面的版本号，以获得最新版本。
+版本号：[![](https://www.jitpack.io/v/YouAreOnlyOne/AndroidHttp.svg)](https://www.jitpack.io/#YouAreOnlyOne/AndroidHttp)  。 使用自行替换下面的版本号，以获得最新版本。
 
 # 使用方法
 
@@ -17,18 +17,18 @@
 1.第一步，在项目的build.gradle下配置，注意是项目的build.gradle：
 
      allprojects {
-        repositories {
-            ...
-            maven { url "https://jitpack.io" }
-        }
-     }
+		repositories {
+			...
+			maven { url 'https://www.jitpack.io' }
+		}
+	}
     
     
 2.第二步,在app的build.gradle下添加如下依赖：
 
     dependencies {
             ...
-            compile 'com.github.Brioal:Test:1.0'
+            implementation 'com.github.YouAreOnlyOne:AndroidHttp:v1.0'
             ...
      }
     
