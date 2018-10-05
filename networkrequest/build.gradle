@@ -29,17 +29,17 @@ android {
         versionCode 1
         versionName "1.0.0.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        signingConfig signingConfigs.release
+       // signingConfig signingConfigs.release
     }
     buildTypes {
         release {
-            minifyEnabled true   //是否代码混淆
+            minifyEnabled false   //是否代码混淆
             multiDexEnabled true //防止方法数量超过65536导致错误
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
+           // signingConfig signingConfigs.release
         }
         debug {
-            signingConfig signingConfigs.release
+           // signingConfig signingConfigs.release
         }
     }
     productFlavors {
