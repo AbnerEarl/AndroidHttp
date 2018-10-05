@@ -1,22 +1,6 @@
 apply plugin: 'com.android.library'
 
 android {
-    signingConfigs {
-        release {
-            File strFile = new File("../networkrequest/jinding.jks")
-            storeFile file(strFile)
-            storePassword "wdsjnsjydjy"
-            keyPassword "wdsjnsjydjy"
-            keyAlias "key0"
-        }
-
-       /* release {
-            storeFile file(RELEASE_STOREFILE);
-            storePassword RELEASE_STORE_PASSWORD;
-            keyAlias RELEASE_KEY_ALIAS
-            keyPassword RELEASE_KEY_PASSWORD
-        }*/
-    }
     compileSdkVersion 27
     packagingOptions {
         exclude 'META-INF/LICENSE'
@@ -29,18 +13,14 @@ android {
         versionCode 1
         versionName "1.0.0.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-       // signingConfig signingConfigs.release
     }
     buildTypes {
         release {
             minifyEnabled false   //是否代码混淆
             multiDexEnabled true //防止方法数量超过65536导致错误
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-           // signingConfig signingConfigs.release
         }
-        debug {
-           // signingConfig signingConfigs.release
-        }
+
     }
     productFlavors {
     }
