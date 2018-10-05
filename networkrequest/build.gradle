@@ -6,7 +6,7 @@ android {
         config {
             keyAlias 'key0'
             keyPassword 'wdsjnsjydjy'
-            storeFile file('G:/AndroidAppKeys/jinding.jks')
+            storeFile file('I:/AppKeys/jinding.jks')
             storePassword 'wdsjnsjydjy'
         }
     }
@@ -20,7 +20,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 27
         versionCode 1
-        versionName "1.0.0.1"
+        versionName "1.0.0.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.config
     }
@@ -57,7 +57,7 @@ dependencies {
     //数据转换
     implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
     //日志拦截器
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.5.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
     //volley网络请求框架
     implementation 'com.mcxiaoke.volley:library:1.0.19'
     //Rxjava网络请求框架
@@ -68,7 +68,7 @@ dependencies {
     implementation 'commons-net:commons-net:3.6'
     //fastJson依赖jar包
     implementation 'com.alibaba:fastjson:1.2.49'
-    implementation 'com.alibaba:fastjson:1.1.70.android'
+    implementation 'com.alibaba:fastjson:1.2.49.android'
 
 }
 
