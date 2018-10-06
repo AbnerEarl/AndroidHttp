@@ -262,6 +262,21 @@ Sbt中使用：
  
  更新中……
  
+# 相关介绍
+
+OkHttp 、Retrofit 、Volley 、RxJava、Novate在Android中Web网络请求一行代码解决。
+
+https://blog.csdn.net/u014374009/article/details/82933127
+
+一行代码实现Ftp文件上传、文件下载、文件删除和进度监听的工具类的使用。
+
+https://blog.csdn.net/u014374009/article/details/82944107
+
+一行代码解决Android中图片加载、图片压缩、图片保存、获取缩略图、图片转换等相关问题。
+
+https://blog.csdn.net/u014374009/article/details/82948722
+
+
 # 其它信息
 
 1.项目还有很多不完善的地方，欢迎大家指导。
