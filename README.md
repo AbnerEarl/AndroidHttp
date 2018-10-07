@@ -14,7 +14,7 @@
 
 # 使用方法
 
-Android中使用：
+## Android中使用：
 
 方法一：
 
@@ -55,7 +55,7 @@ Android中使用：
             ...
     }
  
-Maven中使用：
+## Maven中使用：
 
 第一步，在maven中添加：
 
@@ -74,7 +74,7 @@ Maven中使用：
 	    <version>版本号</version>
 	</dependency>
 	
-Sbt中使用：
+## Sbt中使用：
 
   第一步： 在build.sbt文件末尾添加：
   
@@ -84,7 +84,7 @@ Sbt中使用：
   
   	libraryDependencies += "com.github.YouAreOnlyOne" % "AndroidHttp" % "版本号"
  
- Leiningen中使用：
+ ## Leiningen中使用：
  
    第一步：在project.clj文件末尾添加：
    
