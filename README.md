@@ -18,7 +18,7 @@
 
 ## Android中使用：
 
-方法一：
+### 方法一：
 
 1.第一步，在项目的build.gradle下配置，注意是项目的build.gradle：
 
@@ -39,7 +39,7 @@
      }
     
     
-方法二：
+### 方法二：
     
  1.第一步，下载依赖的包：https://github.com/YouAreOnlyOne/AndroidHttp/blob/master/aar/networkrequest-release.aar 。并放到项目的 libs 目录下面。
     
